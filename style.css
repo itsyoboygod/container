@@ -1,0 +1,290 @@
+:root{
+    --white: #ffffff;
+    --blue: #1e90ff;
+    --gray: gray;
+    --darker-blue: #1e1e1e;
+    --black: black;
+    --random-color: --random-color;
+}
+
+html{
+    background-color: white !important;
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    
+}
+
+.section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--black);    
+    padding: 10px;
+    min-height: 100vh;
+}
+
+/* ----------------------------FIRST SECTION-------------------------- */
+
+.section-title{
+    align-self: center;
+    
+}
+
+.section-title p{
+    margin: 5px auto;
+    padding: 5px;
+    text-align: center;
+    font-size: 4rem;
+    font-family: monospace;
+    font-weight: 900;
+    background: linear-gradient(to right, var(--blue), var(--darker-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    pointer-events: none;
+}
+
+.footer-link{
+    align-self: center;
+}
+
+/* ----------------------------SECOND SECTION-------------------------- */
+
+.container{
+    display: flex;
+    margin: 5px;
+    padding: 5px;
+
+}
+
+.container ul{
+    display: flex;
+    list-style-type: none;
+    color: var(--white);
+    margin: 5px;
+    padding: 20px 0;
+    gap: 1rem;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+}
+
+.container ul li{
+    margin: 5px;
+    padding: 185px;
+    background-color: #1e90ff;
+    scroll-snap-align: center;
+
+}
+
+
+::-webkit-scrollbar{
+    height: 5px;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(to right, var(--blue), var(--darker-blue));
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:vertical{
+    background: var(--gray);
+}
+
+/* ----------------------------THIRD SECTION-------------------------- */
+
+.third{
+    /* background: linear-gradient(to right, var(--blue), var(--darker-blue)); */
+    /* background: var(--darker-blue); */
+    background: var(--black);
+
+}
+
+ #left , #right{
+    display: flex;
+    flex-direction: row;
+    margin: 50px;
+    padding: 0px;
+    height: 50vh;
+    color: white;
+    backdrop-filter: blur(5px);
+    background: transparent;
+    /* background-color: hsla(0,0%,100%,.3); */
+}
+
+#right{
+    flex-flow: row-reverse;
+}
+
+
+@media(max-width: 900px) {
+     #left , #right{
+        flex-direction: column;
+        height: auto;
+    }
+}
+
+.left-header{
+    align-self: center;
+    background:  rgba(65, 0, 0);
+    margin: 0;
+    padding: 10px 50px;
+}
+
+.left-text, .right-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.left-header p{
+     color: var(--white);
+     font-size: 2rem;
+     font-family: monospace;
+     font-weight: 900;
+}
+
+#section-border-left{
+    /* backdrop-filter: blur(2px); */
+    background: transparent;
+    border-bottom: 10px solid rgba(255, 0, 0, 0.5);
+    border-left: 10px solid rgba(255, 0, 0, 0.5);
+    border-top: 10px solid rgba(255, 0, 0, 0.5);
+    
+    /* border-bottom: 10px solid rgba(65, 0, 0);
+    border-left: 10px solid rgba(65, 0, 0);
+    border-top: 10px solid rgba(65, 0, 0); */
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='50px' width='120px'><text x='0' y='15' fill='grey' font-size='20'>@</text></svg>");
+    /* background-image:url("https://virtualbackgrounds.site/wp-content/uploads/2020/08/the-matrix-digital-rain-1536x864.jpg"); */
+    /* background-repeat: no-repeat; */
+}
+
+ #left h1{
+    writing-mode: vertical-rl;
+    text-align: center;
+    font-size: 3rem;
+    font-family: monospace;
+    margin: 2px;
+    padding: 2px;
+}
+
+ #left p{
+    margin: 5px;
+    padding: 5px;
+}
+
+@media(max-width: 900px) {
+     #left h1{
+        writing-mode: horizontal-tb;
+    }
+
+     #left p{
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical; overflow: hidden;
+    }
+}
+
+#section-border-right{
+    /* backdrop-filter: blur(2px); */
+    background: transparent;
+    /* background: linear-gradient(to bottom left, yellow,transparent),linear-gradient(to bottom right, red,transparent),linear-gradient(to top left,lime,transparent),linear-gradient(to top right,blue,transparent); */
+    border-right: 10px solid rgba(65, 0, 0);
+    border-bottom: 10px solid rgba(65, 0, 0);
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='50px' width='120px'><text x='0' y='15' fill='red' font-size='20'>@</text></svg>");
+    /* background-repeat: no-repeat; */
+}
+
+/* -------------------------------------------------------- */
+
+
+.left-header, .right-header{
+    align-self: center;
+    background:  rgba(65, 0, 0);
+    margin: 0;
+    padding: 10px 50px;
+}
+
+.left-header p, .right-header p{
+     color: var(--white);
+     font-size: 2rem;
+     font-family: monospace;
+     font-weight: 900;
+}
+
+
+ #left h1{
+    writing-mode: vertical-rl;
+    text-align: center;
+    font-size: 3rem;
+    font-family: monospace;
+    margin: 2px;
+    padding: 2px;
+}
+
+ #left p{
+    margin: 5px;
+    padding: 5px;
+}
+
+@media(max-width: 900px) {
+     #left h1{
+        writing-mode: horizontal-tb;
+    }
+
+     #left p{
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical; overflow: hidden;
+    }
+}
+
+#section-border-right{
+    /* backdrop-filter: blur(2px); */
+    background: transparent;
+    /* background: linear-gradient(to bottom left, yellow,transparent),linear-gradient(to bottom right, red,transparent),linear-gradient(to top left,lime,transparent),linear-gradient(to top right,blue,transparent); */
+    border-right: 10px solid rgba(65, 0, 0);
+    border-bottom: 10px solid rgba(65, 0, 0);
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='50px' width='120px'><text x='0' y='15' fill='grey' font-size='20'>@</text></svg>");
+    /* background-repeat: no-repeat; */
+}
+
+#right{
+    /* flex-flow: row-reverse; */
+}
+
+
+#right h1{
+    writing-mode: vertical-rl;
+    text-align: center;
+    font-size: 3rem;
+    font-family: monospace;
+    margin: 2px;
+    padding: 2px;
+}
+
+ #right p{
+    margin: 5px;
+    padding: 5px;
+}
+
+@media(max-width: 900px) {
+     #right h1{
+        writing-mode: horizontal-tb;
+    }
+
+     #right p{
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical; overflow: hidden;
+    }
+}
