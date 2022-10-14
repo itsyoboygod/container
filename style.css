@@ -5,6 +5,7 @@
     --darker-blue: #1e1e1e;
     --black: black;
     --random-color: --random-color;
+    --darkgrey: #131313;
 }
 
 html{
@@ -80,27 +81,41 @@ main{
 .container ul li{
     margin: 5px;
     padding: 185px;
-    background-color: #1e90ff;
+    background-color: var(--darker-blue);
     scroll-snap-align: center;
 
 }
 
 ::-webkit-scrollbar{
     height: 5px;
+    width: 5px;
     border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb{
-    background: linear-gradient(to right, var(--blue), var(--darker-blue));
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:vertical{
-    background: var(--gray);
+    padding: 10px;
+    margin: 10px;
 }
 
 ::-webkit-scrollbar-thumb:horizontal{
-    height: 5px;
+    /* background: linear-gradient(to right, var(--blue), var(--darker-blue)); */
+    background: var(--darker-blue);
+}
+
+::-webkit-scrollbar-button::before{
+    content: attr('left');
+}
+
+::-webkit-scrollbar:horizontal:hover{
+    zoom: 2rem;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb:vertical{
+    background: var(--darker-blue);
+    height: 2rem;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track-piece{
+    background-color: var(--darkgrey);    
 }
 
 /* ----------------------------THIRD SECTION-------------------------- */
@@ -163,10 +178,14 @@ main{
     border-width: 10px;
     border-style: solid;
     border-image: linear-gradient(to left, darkblue, darkorchid) 1;
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='50px' width='120px'><text x='40' y='30' fill='red' font-size='20'>♠</text></svg>");
+    /* background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='50px' width='120px'><text x='40' y='30' fill='darkorchid' font-size='20'>♠</text></svg>"); */
+    background-image: url("./circle-scatter-haikei.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     border-right: none;
     position: relative;
-    top: 0px;
+    top: -1px;
 }
 
 
@@ -194,7 +213,7 @@ main{
     background: linear-gradient(to left, darkblue, darkorchid);
     margin: 0 auto;
     padding: 10px 50px;
-    width: fit-content;
+    /* width: fit-content; */
 }
 
 .right-header{
@@ -203,7 +222,7 @@ main{
     background: linear-gradient(to left, darkblue, darkorchid);
     margin: 0 auto;
     padding: 10px 50px;
-    width: fit-content;
+    /* width: fit-content; */
 
 }
 
@@ -247,7 +266,11 @@ main{
     border-style: solid;
     border-image: linear-gradient(to left, darkblue, darkorchid) 1;
     /* background: linear-gradient(to right, red, purple); */
-    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='50px' width='120px'><text x='40' y='30' fill='red' font-size='20'>♥</text></svg>");
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='50px' width='120px'><text x='40' y='30' fill='darkblue' font-size='20'>♦</text></svg>");
+    background-image: url("./circle-scatter-haikei2.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     top: -10px;
     border-left: none;
 }
@@ -271,3 +294,65 @@ main{
         writing-mode: horizontal-tb;
     }
 }
+
+
+/* ----------------------------FOURTH SECTION-------------------------- */
+
+.fourth .spacer{
+    /* background: linear-gradient(to right, var(--blue), var(--darker-blue)); */
+    /* background: var(--darker-blue); */
+    background: var(--black);
+    background-image: url('./layered-waves-haikei.svg');
+
+
+}
+
+.svg-background{
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    flex-direction: column;
+}
+
+/* .svg-background{
+    background-image: url( '/ffflux.svg' );
+    background-size: cover;
+    background-repeat: no-repeat;
+
+} */
+
+.spacer{
+    aspect-ratio: 900/300;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.layer1{
+    background-image: url('./layered-waves-haikei.svg');
+}
+
+.flip{
+    transform: rotate(180deg);
+}
+
+.fifth .spacer{
+    /* background: linear-gradient(to right, var(--blue), var(--darker-blue)); */
+    /* background: var(--darker-blue); */
+    background: var(--black);
+    background-image: url('./layered-waves-haikei.svg');
+
+
+}
+
+.flow-reverse{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+/* .section-title p , .svg-background h1,  .footer-link p{
+    transform: rotate(180deg);
+}  */
