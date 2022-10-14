@@ -85,7 +85,6 @@ main{
 
 }
 
-
 ::-webkit-scrollbar{
     height: 5px;
     border-radius: 10px;
@@ -98,6 +97,10 @@ main{
 
 ::-webkit-scrollbar-thumb:vertical{
     background: var(--gray);
+}
+
+::-webkit-scrollbar-thumb:horizontal{
+    height: 5px;
 }
 
 /* ----------------------------THIRD SECTION-------------------------- */
@@ -114,7 +117,7 @@ main{
     flex-direction: row;
     margin: 50px;
     padding: 0px;
-    height: 50vh;
+    height: 55vh;
     color: white;
     backdrop-filter: blur(5px);
     background: transparent;
@@ -130,20 +133,23 @@ main{
      #left , #right{
         flex-direction: column;
         height: auto;
+        margin: 15px;
     }
-}
-
-.left-header{
-    align-self: center;
-    background:  rgba(65, 0, 0);
-    margin: 0;
-    padding: 10px 50px;
 }
 
 .left-text, .right-text{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+}
+
+.right-text{
+    overflow-y: scroll;
+}
+
+@media(max-width: 500px) {
+.right-text{
+    overflow-y: auto;
+   }
 }
 
 .left-header p{
@@ -154,28 +160,15 @@ main{
 }
 
 #section-border-left{
-    /* backdrop-filter: blur(2px); */
-    background: transparent;
-    border-bottom: 10px solid rgba(255, 0, 0, 0.5);
-    border-left: 10px solid rgba(255, 0, 0, 0.5);
-    border-top: 10px solid rgba(255, 0, 0, 0.5);
-    
-    /* border-bottom: 10px solid rgba(65, 0, 0);
-    border-left: 10px solid rgba(65, 0, 0);
-    border-top: 10px solid rgba(65, 0, 0); */
-    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='50px' width='120px'><text x='0' y='15' fill='grey' font-size='20'>@</text></svg>");
-    /* background-image:url("https://virtualbackgrounds.site/wp-content/uploads/2020/08/the-matrix-digital-rain-1536x864.jpg"); */
-    /* background-repeat: no-repeat; */
+    border-width: 10px;
+    border-style: solid;
+    border-image: linear-gradient(to left, darkblue, darkorchid) 1;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='50px' width='120px'><text x='40' y='30' fill='red' font-size='20'>♠</text></svg>");
+    border-right: none;
+    position: relative;
+    top: 0px;
 }
 
- #left h1{
-    writing-mode: vertical-rl;
-    text-align: center;
-    font-size: 3rem;
-    font-family: monospace;
-    margin: 2px;
-    padding: 2px;
-}
 
  #left p{
     margin: 5px;
@@ -186,32 +179,38 @@ main{
      #left h1{
         writing-mode: horizontal-tb;
     }
-
-     #left p{
-        display: -webkit-box;
-        -webkit-line-clamp: 5;
-        -webkit-box-orient: vertical; overflow: hidden;
-    }
-}
-
-#section-border-right{
-    /* backdrop-filter: blur(2px); */
-    background: transparent;
-    /* background: linear-gradient(to bottom left, yellow,transparent),linear-gradient(to bottom right, red,transparent),linear-gradient(to top left,lime,transparent),linear-gradient(to top right,blue,transparent); */
-    border-right: 10px solid rgba(65, 0, 0);
-    border-bottom: 10px solid rgba(65, 0, 0);
-    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='50px' width='120px'><text x='0' y='15' fill='red' font-size='20'>@</text></svg>");
-    /* background-repeat: no-repeat; */
 }
 
 /* -------------------------------------------------------- */
 
 
-.left-header, .right-header{
+.forum2{
+    top: -10px;
+    position: relative;
+}
+
+.left-header{
     align-self: center;
-    background:  rgba(65, 0, 0);
-    margin: 0;
+    background: linear-gradient(to left, darkblue, darkorchid);
+    margin: 0 auto;
     padding: 10px 50px;
+    width: fit-content;
+}
+
+.right-header{
+    position: relative;
+    align-self: center;
+    background: linear-gradient(to left, darkblue, darkorchid);
+    margin: 0 auto;
+    padding: 10px 50px;
+    width: fit-content;
+
+}
+
+@media(max-width: 400px) {
+.left-header, .right-header{
+    padding: 10px 88px;
+   }
 }
 
 .left-header p, .right-header p{
@@ -240,28 +239,18 @@ main{
      #left h1{
         writing-mode: horizontal-tb;
     }
-
-     #left p{
-        display: -webkit-box;
-        -webkit-line-clamp: 5;
-        -webkit-box-orient: vertical; overflow: hidden;
-    }
 }
 
 #section-border-right{
-    /* backdrop-filter: blur(2px); */
-    background: transparent;
-    /* background: linear-gradient(to bottom left, yellow,transparent),linear-gradient(to bottom right, red,transparent),linear-gradient(to top left,lime,transparent),linear-gradient(to top right,blue,transparent); */
-    border-right: 10px solid rgba(65, 0, 0);
-    border-bottom: 10px solid rgba(65, 0, 0);
-    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='50px' width='120px'><text x='0' y='15' fill='grey' font-size='20'>@</text></svg>");
-    /* background-repeat: no-repeat; */
+    position: relative;
+    border-width: 10px;
+    border-style: solid;
+    border-image: linear-gradient(to left, darkblue, darkorchid) 1;
+    /* background: linear-gradient(to right, red, purple); */
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='50px' width='120px'><text x='40' y='30' fill='red' font-size='20'>♥</text></svg>");
+    top: -10px;
+    border-left: none;
 }
-
-#right{
-    /* flex-flow: row-reverse; */
-}
-
 
 #right h1{
     writing-mode: vertical-rl;
@@ -280,11 +269,5 @@ main{
 @media(max-width: 900px) {
      #right h1{
         writing-mode: horizontal-tb;
-    }
-
-     #right p{
-        display: -webkit-box;
-        -webkit-line-clamp: 5;
-        -webkit-box-orient: vertical; overflow: hidden;
     }
 }
