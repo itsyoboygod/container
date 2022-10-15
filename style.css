@@ -1,6 +1,8 @@
 :root{
     --white: #ffffff;
     --blue: #1e90ff;
+    --darkblue: #00008b;
+    --purple: #9932cc;
     --gray: gray;
     --darker-blue: #1e1e1e;
     --black: black;
@@ -9,7 +11,7 @@
 }
 
 html{
-    background-color: white !important;
+    background-color: white;
     scroll-behavior: smooth;
 }
 
@@ -356,3 +358,60 @@ main{
 /* .section-title p , .svg-background h1,  .footer-link p{
     transform: rotate(180deg);
 }  */
+
+@keyframes background-pan{
+    from{
+        background-position: 0% center;
+    }
+    
+    to{
+        background-position: 500% center;
+    }
+
+}
+
+.sixth{
+    animation: background-pan 20s linear infinite;
+    background: linear-gradient( 
+        to right,
+            var(--darkblue),
+            var(--purple),
+            var(--darkblue)
+    );
+    background-size: 500%;
+    overflow: hidden;
+    margin: 0;
+    position: relative;
+    padding: 0;
+}
+
+/* -------------------------------------- */
+
+
+#tiles {
+    height: calc(100vh - 1px);
+    width: calc(100vw - 1px);
+    position: relative;
+    z-index: 2;
+    
+    display: grid;
+    grid-template-columns: repeat(var(--columns), 1fr);
+    grid-template-rows: repeat(var(--rows), 1fr);
+  }
+  
+  .tile {
+    cursor: pointer;
+    position: relative;
+    /* padding: 50px; */
+  }
+  
+  .tile:hover:before {
+    background-color: rgb(30, 30, 30);
+  }
+  
+  .tile:before {
+    background-color: var(--black);
+    content: "";
+    inset: 0.5px;
+    position: absolute;
+  }
