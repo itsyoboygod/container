@@ -31,7 +31,8 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: var(--black);    
+    /* background-color: var(--black);     */
+    background-color: transparent;    
     padding: 10px;
     min-height: 100vh;
 }
@@ -60,7 +61,44 @@ main{
     align-self: center;
 }
 
+
+.layer3{
+    background-image: url('./newtop.svg'),url('./newbottom.svg');
+    background-position: top right, bottom left; 
+    background-repeat:no-repeat; 
+    /* background-blend-mode: screen; */
+}
+
+@keyframes background-pan2{
+    from{
+        background-position: 0% top;
+    }
+    
+    to{
+        background-position: 500% bottom;
+    }
+
+}
+
+.anime-1{
+    animation: background-pan2 20s linear infinite;
+    background: linear-gradient( 
+        to left,
+            var(--darkblue),
+            var(--purple),
+            var(--darkblue)
+    );
+    background-size: 500%;
+    overflow: hidden;
+    margin: 0;
+    position: relative;
+    padding: 0;
+}
 /* ----------------------------SECOND SECTION-------------------------- */
+
+.second {
+    background-color: var(--black);
+}
 
 .container{
     display: flex;
@@ -78,6 +116,23 @@ main{
     gap: 1rem;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
+}
+
+.container-panel{
+    display: flex;
+}
+
+ .panel:nth-child(2){
+    transition-delay: 200ms;
+}
+
+ .panel:nth-child(3){
+    transition-delay: 400ms;
+
+}
+
+ .panel:nth-child(4){
+    transition-delay: 600ms;
 }
 
 .container ul li{
@@ -327,15 +382,24 @@ main{
 } */
 
 .spacer{
-    aspect-ratio: 900/300;
+    /* aspect-ratio: 900/300; */
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
 
 .layer1{
-    background-image: url('./layered-waves-haikei.svg');
+    background-image: url('./layered-waves-haikei.svg')
+     /* url('./layered-waves-haikei-upside_down.svg'); */
+    
 }
+
+/* .layer2{
+    background-image: url('./layered-waves-haikei-upside_down.svg');
+    
+} */
+
+
 
 .flip{
     transform: rotate(180deg);
@@ -346,8 +410,6 @@ main{
     /* background: var(--darker-blue); */
     background: var(--black);
     background-image: url('./layered-waves-haikei.svg');
-
-
 }
 
 .flow-reverse{
@@ -415,3 +477,31 @@ main{
     inset: 0.5px;
     position: absolute;
   }
+
+
+/* -------------------------------------- */
+
+
+.hidden{
+    opacity: 0;
+    transition: all 1s;
+    filter: blur(5px);
+    transform: translateX(-100%);
+}   
+
+@media(prefers-reduced-motion){
+    .hidden{
+        transition: none;
+    }
+}
+
+
+
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+
+

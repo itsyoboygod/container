@@ -7,28 +7,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Container</title>
     <link rel="stylesheet" href="style.css">
-    <script defer src="rdncolor.js" type="text/javascript"></script>
+    <!-- <script defer src="rdncolor.js" type="text/javascript"></script> -->
     <script defer src="tiles.js" type="text/javascript"></script>
+    <script defer src="app.js" type="text/javascript"></script>
 
 </head>
 
 <body>
     <main>
-        <section class="first section" id="first-section">
-            <div class="section-title">
-                <p>@Container</p>
-            </div>
-            <div class="footer-link">
-                <p><a href="#second-section">next</a></p>
-            </div>
-        </section>
+        <div class="anime-1">
+            <section class="first section spacer layer3" id="first-section">
+                <div class="section-title hidden">
+                    <p>@Container</p>
+                </div>
+                <div class="footer-link hidden">
+                    <p><a href="#second-section">next</a></p>
+                </div>
+            </section>
+        </div>
 
         <section class="second section" id="second-section">
             <div class="section-title">
                 <p>Second Section</p>
             </div>
             <div class="container">
-                <ul>
+                <ul class="container-panel">
                     <li>1</li>
                     <li>2</li>
                     <li>3</li>
@@ -50,8 +53,8 @@
 
 
 
-        <section class="third section" id="third-section">
-            <div class="forum1">
+        <section class="third section " id="third-section">
+            <div class="forum1 hidden">
                 <div class="left-header">
                     <p>Lorem Ipsum</p>
                 </div>
@@ -168,7 +171,7 @@
                 </div>
             </div>
             <!-- ---------------------------------------------- -->
-            <div class="forum2">
+            <div class="forum2 hidden">
                 <div class="right-header">
                     <p>Lorem Ipsum</p>
                 </div>
@@ -279,42 +282,41 @@
         </section>
 
 
-        <section class="fourth section spacer layer1" id="fourth-section">
-            <div class="section-title">
+        <section class="fourth section spacer layer1 " id="fourth-section">
+            <div class="section-title hidden">
                 <p>Fourth Section</p>
             </div>
-            <div class="svg-background">
+            <div class="svg-background hidden">
                 <h1>Svg Background</h1>
             </div>
-            <div class="footer-link">
+            <div class="footer-link hidden">
                 <p><a href="#third-section">prev</a>|<a href="#fifth-section">next</a></p>
             </div>
         </section>
 
         <section class="fifth section spacer layer1 flip" id="fifth-section">
             <div class="flow-reverse">
-                <div class="section-title flip">
+                <div class="section-title  flip">
                     <p>Fifth Section</p>
                 </div>
-                <div class="svg-background flip">
+                <div class="svg-background  flip">
                     <h1>Svg Background</h1>
                 </div>
-                <div class="footer-link flip">
+                <div class="footer-link  flip">
                     <p><a href="#fourth-section">prev</a>|<a href="#sixth-section">next</a></p>
                 </div>
             </div>
         </section>
 
-            <section class="sixth section" id="sixth-section">
-                <div id="tiles">
-                    <div class="tile"></div>
-                </div>
-                <div class="section-title">
+        <section class="sixth section" id="sixth-section">
+            <div id="tiles"></div>
+            <div class="tile hidden"></div>
+            <!-- <div class="section-title">
                     <p>Sixth Section</p>
                 </div>
-                    <div class="footer-link">
+                <div class="footer-link">
                     <p><a href="#fourth-section">prev</a>|<a href="#sixth-section">next</a></p>
-                </div>
+                </div> -->
         </section>
 
     </main>
