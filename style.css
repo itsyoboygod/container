@@ -61,12 +61,30 @@ main{
     align-self: center;
 }
 
+.section-title p::selection{
+    display: none;
+}
+
+.footer-link p::selection{
+    display: none;
+}
+
 
 .layer3{
     background-image: url('./newtop.svg'),url('./newbottom.svg');
     background-position: top right, bottom left; 
     background-repeat:no-repeat; 
     /* background-blend-mode: screen; */
+    -webkit-mask-image: linear-gradient(
+        rgb(0 0 0 / 1),
+        rgb(0 0 0 / 0.5) 80%,
+        rgb(0 0 0 / 0)
+    );
+    mask-image: linear-gradient(
+        rgb(0 0 0 / 1),
+        rgb(0 0 0 / 0.5) 80%,
+        rgb(0 0 0 / 0)
+    );
 }
 
 @keyframes background-pan2{
@@ -81,12 +99,13 @@ main{
 }
 
 .anime-1{
-    animation: background-pan2 20s linear infinite;
-    background: linear-gradient( 
-        to left,
-            var(--darkblue),
-            var(--purple),
-            var(--darkblue)
+    animation: background-pan2 100s linear infinite;
+    background-image: radial-gradient( 
+        circle,
+            var(--purple) 5%,
+            var(--darkblue) 35%,
+            var(--black) 60%
+
     );
     background-size: 500%;
     overflow: hidden;
